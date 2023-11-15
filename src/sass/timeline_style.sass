@@ -1,0 +1,98 @@
+
+$mobile: 568px
+$tablet: 768px
+$desktop: 1024px
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
+
+=tablet
+   @media screen and (min-width: $mobile) and (max-width: $desktop - 1px)
+    @content
+
+=mobile
+  @media screen and (max-width: $mobile - 1px)
+    @content
+
+html 
+    box-sizing: border-box
+
+
+.timeline, .timeline::before, .timeline::after 
+    box-sizing: inherit
+
+
+.timeline_block 
+    line-height: 1.5
+    font-family: 'Oswald'
+    font-weight: normal
+    font-style: normal
+
+
+.wrapper 
+    margin: 0 auto
+    padding: 0px 0px 0px 40px
+    border-left-style: solid
+    border-color: grey
+    margin: 30px 0
+
+    width: 100%
+    .milestone
+        display: inline-block
+        box-sizing: border-box
+        background-color: #1d3d7c
+        color: #fff
+        border-radius: 8px
+        padding: 4px 16px 3px 16px
+        margin-bottom: 10px
+        font-weight: 700
+        font-size: 30px
+        +tablet
+            font-size: 24px   
+        +mobile
+            font-size: 18px
+    a
+        font-size: 24px
+        +tablet
+            font-size: 18px   
+        +mobile
+            font-size: 16px              
+    p
+        display: block
+        margin-bottom: 10px
+
+        font-size: 24px
+        +tablet
+            font-size: 18px   
+        +mobile
+            font-size: 16px 
+    .date_img
+        max-height: 300px
+        max-width: 80%
+    audio
+         max-width: 100%
+    .timeline-event-icon
+        position: relative 
+        transform: translate(-41px, 35px)
+        outline: 10px solid white
+        display: block
+        margin: 0.5em 0.5em 0.5em -0.5em
+        width: 1em
+        height: 1em
+        border-style: solid
+        border-color: grey
+        border-radius: 50%
+        background: #fff
+
+
+article 
+    position: relative
+    max-width: 980px
+    margin: 0 auto
+
+
+            
+        
+    
+

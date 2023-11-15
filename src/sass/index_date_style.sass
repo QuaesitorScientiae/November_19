@@ -1,0 +1,164 @@
+$mobile: 568px
+$tablet: 768px
+$desktop: 1024px
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
+
+=tablet
+   @media screen and (min-width: $mobile) and (max-width: $desktop - 1px)
+    @content
+
+=mobile
+  @media screen and (max-width: $mobile - 1px)
+    @content
+
+$color-1: #1d3d7c
+$color-2: white
+$color-3: #f9d083
+
+*
+    margin: 0
+    box-sizing: border-box
+    
+    
+
+header, .about_me_brif, .movie
+    font-family: 'Oswald'
+    font-weight: normal
+    font-style: normal
+    font-size: 20px
+    +tablet
+        font-size: 18px   
+    +mobile
+        font-size: 16px
+
+
+
+.about_me_brif
+    background-color:#BACBDB
+    padding-top: 60px    
+    .about_me
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        text-align: center
+        position: relative        
+        +tablet 
+            flex-direction: column
+        +mobile
+            flex-direction: column
+        &__my_foto
+            max-width: 300px
+            width: 70%
+            border: solid #fff 5px
+            border-radius: 50%
+            margin: 20px 20px
+        &__brif_text_main
+            font-size: 1.4em
+            color:#2e2b2e
+            text-align: center
+            margin: 16px 20px
+            a
+                font-size: 1em
+                text-decoration: none
+        .logo_70
+            width: 100px
+            height: 100px
+
+
+.about_me__brif_titel,  .movie__subtitel 
+    font-family: 'Russo One'
+    font-weight: normal
+    font-style: normal   
+    color: #1d3d7c
+    display: block
+    text-align: left
+    padding: 0.25em 1em 0.2em 1em 
+    text-transform: uppercase
+    border-bottom-style: solid
+    border-color: #1d3d7c
+    margin-top: 10px
+    margin-bottom: 6px
+    font-size: 26px    
+    +tablet
+        font-size: 20px   
+    +mobile
+        font-size: 16px
+        text-align: center
+    .logo_70
+        width: 70px
+        height: 70px    
+
+.timeline_block    
+    display: block
+
+.movie
+    padding-top: 20px
+    background-color: #bacbdb
+    position: relative
+    z-index: 100
+    .row
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        margin-right: 0px
+        margin-left: 0px  
+    &__info
+        display: flex
+        flex-direction: row
+        text-align: center 
+        margin-bottom: 20px
+        justify-content: center
+        align-items: center
+        position: relative
+        &__cover
+            max-height: 80vh
+            max-width: 95%
+            align-self: center
+            box-shadow: 2px 4px 10px black
+    &__control
+        display: flex
+        justify-content: center    
+        .prevBtn, .nextBtn
+            margin: 10px            
+            width: 60px
+            height: 60px
+            border-radius: 50%
+            border-style: none
+            background-color: rgba(0,0,0,0)
+            &:hover
+                transform:  scale(1.1, 1.1)
+            +mobile
+                margin: 10px            
+                width: 40px
+                height: 40px
+        .arrow
+            height: 100%
+.faded
+    animation-name: faded
+    animation-duration: .8s
+
+@keyframes faded
+    from
+        opacity: 0.1
+    to
+        opacity: 1
+
+.newspaper_logo
+    width: 50%
+    margin-bottom: 40px 
+    +mobile
+        width: 95%
+
+.newspaper-Truth_img
+    padding: 0px 0px
+    max-height: 80vh
+    max-width: 100%
+    align-self: center
+    box-shadow: 2px 4px 10px black
+    &:hover
+        box-shadow: 2px 4px 10px blue
